@@ -2,16 +2,17 @@ process.env.FFPROBE_PATH = '/usr/bin/ffprobe'
 const ffprobe = require('ffprobe-client')
 
 if(process.argv[2] === undefined){
-    return console.log('Geef een url op')
+    return console.log('Geef een url op');
 }
 
 const url = encodeURI(process.argv[2]);
 
 async function run () {
     try {
-        const data = await ffprobe(url)
+        const data = await ffprobe(url);
         let audio = [{}];
         let video = [{}];
+        let i = 0;
 
         for (i = 0; i < data.streams.length; i++) {
             const stream = data.streams[i];
