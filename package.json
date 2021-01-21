@@ -1,0 +1,13 @@
+{
+  "name": "ffprobe_cli",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ffprobe-client": "^1.1.6"
+  }
+}
